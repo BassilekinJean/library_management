@@ -39,7 +39,7 @@ class LibraryTransaction(Document):
     def validate_membership(self):
         # check if a valid membership exist for this library member
         valid_membership = frappe.db.exists(
-            "Library Membership",
+            "Library Memberships",
             {
                 "library_member": self.library_member,
                 "docstatus": DocStatus.submitted(),
